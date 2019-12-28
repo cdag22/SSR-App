@@ -1,0 +1,58 @@
+{
+  "name": "ssr-app",
+  "version": "0.0.1",
+  "description": "SSR React App optimized for massive number of requests per second",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:start": "nodemon --watch build --exec \"node build/server.bundle.js\"",
+    "dev:build-client": "webpack --watch --config webpack.dev.client.js",
+    "dev:build-server": "webpack --watch --config webpack.dev.server.js",
+    "prod": "npm-run-all --parallel prod:*",
+    "prod:start": "node build/server.bundle.js",
+    "prod:build-client": "webpack --config webpack.prod.client.js",
+    "prod:build-server": "webpack --config webpack.prod.server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdag22/SSR-App.git"
+  },
+  "author": "cj dagostino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdag22/SSR-App/issues"
+  },
+  "homepage": "https://github.com/cdag22/SSR-App#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.0",
+    "isomorphic-style-loader": "^5.1.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.24.0",
+    "sass-loader": "^8.0.0",
+    "terser-webpack-plugin": "^2.3.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "ejs": "^3.0.1",
+    "ejs-loader": "^0.3.5",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.8.0",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.1.2",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

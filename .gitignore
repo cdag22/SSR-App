@@ -1,0 +1,10 @@
+# Mac OS
+.DS_Store
+
+# Node
+node_modules
+*logs*
+
+# Webpack
+build
+public

@@ -1,0 +1,26 @@
+@import "variables";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $dark;
+}
+
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $blue-g;
+}
+
+.page-title {
+  font-size: $font-size * 5;
+  text-shadow: $text-shadow-light;
+  border-bottom: 5px solid $orange-yellow;
+}
